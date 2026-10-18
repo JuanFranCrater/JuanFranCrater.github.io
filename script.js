@@ -32,6 +32,7 @@ const es = {
   "exp.viewnext.date": "Sep 2018 – Oct 2019 · 1 año 2 meses", "exp.viewnext.role": "Desarrollador Android",
   "exp.viewnext.desc": "Mantuve y amplié tres aplicaciones Android para distintos clientes, incluyendo gráficas con MPAndroidChart. Comencé como estudiante en prácticas.",
   "minimo.desc": "MINIMO crea apps pequeñas y centradas en lo esencial que respetan tu atención. Herramientas sencillas que hacen una sola cosa bien, con tecnologías Android modernas. MINIMO es un proyecto en marcha que comenzó en julio de 2026. La IA ha acompañado cada fase, desde la idea y las pruebas hasta la publicación.",
+  "footer.analytics": "Analítica sin cookies con GoatCounter",
   "badge.done": "Completado",
   "badge.wip": "En desarrollo",
   "badge.pending": "Pendiente de publicación",
@@ -180,3 +181,21 @@ document.querySelectorAll('[data-highlight]').forEach(a => a.addEventListener('c
   document.querySelectorAll('.card.highlight').forEach(c => c.classList.remove('highlight'));
   document.getElementById(a.dataset.highlight).classList.add('highlight');
 }));
+
+// GoatCounter click events for CV, contact and external links
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href]');
+  if (!a || !window.goatcounter || !window.goatcounter.count) return;
+  const href = a.getAttribute('href');
+  let name = null;
+  if (a.closest('nav') && href.startsWith('#')) name = 'nav-' + href.slice(1);
+  else if (a.hasAttribute('data-cv')) name = 'cv-' + lang;
+  else if (href.startsWith('mailto:')) name = 'email';
+  else if (href.includes('linkedin.com')) name = 'linkedin';
+  else if (href.includes('github.com')) name = 'github';
+  else if (href.includes('play.google.com')) name = 'google-play-' + (href.includes('.partners') ? 'my-trip' : 'travelers');
+  else if (href.includes('apps.apple.com')) name = 'app-store-' + (href.includes('id6795553466') ? 'my-trip' : 'travelers');
+  if (!name) return;
+  const section = a.closest('section');
+  window.goatcounter.count({ path: 'click-' + name + (section && !name.startsWith('nav-') ? '-' + section.id : ''), title: name, event: true });
+});

@@ -113,6 +113,7 @@ h2 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; color: var(--mut
 .plain { list-style: none; padding: 0; margin: 0; }
 .plain li { margin-bottom: .8rem; }
 footer { text-align: center; color: var(--muted); padding: 2rem 1.25rem; border-top: 1px solid var(--border); max-width: none; }
+footer a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
 @media (max-width: 600px) {
   .nav { flex-wrap: wrap; }
