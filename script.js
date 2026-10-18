@@ -31,7 +31,7 @@ const es = {
   "exp.padel.desc": "Mantuve la app y desarrollé nuevas funcionalidades.",
   "exp.viewnext.date": "Sep 2018 – Oct 2019 · 1 año 2 meses", "exp.viewnext.role": "Desarrollador Android",
   "exp.viewnext.desc": "Mantuve y amplié tres aplicaciones Android para distintos clientes, incluyendo gráficas con MPAndroidChart. Comencé como estudiante en prácticas.",
-  "minimo.desc": "MINIMO crea apps pequeñas y centradas en lo esencial que respetan tu atención. Herramientas sencillas que hacen una sola cosa bien, con tecnologías Android modernas. MINIMO es un proyecto en marcha que comenzó en julio de 2026. La IA ha acompañado cada fase, desde la idea y las pruebas hasta la publicación.",
+  "minimo.desc": "MINIMO crea apps pequeñas y centradas en lo esencial que respetan tu atención. Herramientas sencillas que hacen una sola cosa bien, con tecnologías Android modernas. Es mi laboratorio continuo de prototipado rápido con flujos de trabajo de IA, iniciado en julio de 2026. La IA acompaña cada fase, desde la idea y el diseño hasta el desarrollo, las pruebas y la publicación.",
   "footer.analytics": "Analítica sin cookies con GoatCounter",
   "badge.done": "Completado",
   "badge.wip": "En desarrollo",
@@ -78,15 +78,6 @@ const es = {
   "lvl.Extensive Experience": "Amplia experiencia", "lvl.Advanced": "Avanzado", "lvl.Intermediate": "Intermedio", "lvl.Basic": "Básico", "lvl.Basic-Intermediate": "Básico-intermedio"
 };
 
-// Proficiency levels are editable placeholders: Extensive Experience=95, Advanced=75, Intermediate=55
-const skills = [
-  { group: "Mobile", items: [["Android (Kotlin / Java)", "Extensive Experience"], ["iOS (Swift)", "Advanced"], ["React Native", "Basic-Intermediate"]] },
-  { group: "Practices", items: [["AI agents / GitHub Copilot", "Advanced"], ["CI/CD", "Intermediate"]]},
-  { group: "Frontend & Backend", items: [["Web (PHP / JS / HTML / CSS)", "Intermediate"], [".NET", "Intermediate"], ["WPF", "Intermediate"]] },
-  { group: "Game Development", items: [["Unity3D", "Intermediate"], ["Godot", "Basic"], ["Ren'Py", "Basic-Intermediate"]] }
-];
-const pct = { "Extensive Experience": 95, Advanced: 75, Intermediate: 55, "Basic-Intermediate": 35, Basic: 20 };
-
 const nodes = document.querySelectorAll("[data-i18n]");
 const en = {};
 nodes.forEach(n => { en[n.dataset.i18n] = n.textContent; });
@@ -97,14 +88,6 @@ let lang = localStorage.getItem("lang") || (navigator.language.startsWith("es") 
 
 function t(key, fallback) { return lang === "es" ? (es[key] || fallback) : (en[key] || fallback); }
 
-function renderSkills() {
-  document.getElementById("skill-list").innerHTML = skills.map(g => `
-    <div class="skill-group"><h4>${t("skills." + g.group, g.group)}</h4>
-    ${g.items.map(([name, lvl]) => `<div class="skill">${name}<span class="lvl">${t("lvl." + lvl, lvl)}</span>
-      <div class="bar"><i style="width:${pct[lvl]}%"></i></div></div>`).join("")}
-    </div>`).join("");
-}
-
 function apply() {
   root.lang = lang;
   nodes.forEach(n => { n.textContent = lang === "es" ? (es[n.dataset.i18n] ?? en[n.dataset.i18n]) : en[n.dataset.i18n]; });
@@ -114,7 +97,6 @@ function apply() {
     ? "Senior Mobile Engineer · Especialista en Android con experiencia en iOS y React Native."
     : "Senior Mobile Engineer · Android specialist with iOS and React Native expertise.";
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
-  renderSkills();
 }
 
 langBtn.addEventListener("click", () => {
