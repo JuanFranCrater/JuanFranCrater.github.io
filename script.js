@@ -27,7 +27,7 @@ const es = {
   "eng.int.label": "Integraciones",
   "eng.int.text": "Librerías de pago como Redsys, gráficas con MPAndroidChart y dispositivos Android con hardware como impresoras Sunmi.",
   "eng.arch.label": "Arquitectura",
-  "eng.arch.text": "Android nativo con MVVM, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. He tomado la mayoría de las decisiones de arquitectura en mis proyectos y he hecho migraciones de XML a Compose en el pasado.",
+  "eng.arch.text": "Android nativo con Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. He trabajado con MVVM, MVC y MVP, he tomado la mayoría de las decisiones de arquitectura en mis proyectos y he hecho migraciones de XML a Compose en el pasado.",
   "eng.quality.label": "Calidad y fiabilidad",
   "eng.quality.text": "Tests unitarios, mantenimiento del pipeline de CI/CD, monitorización de crashes, A/B testing y Remote Config con Firebase, y seguimiento de eventos de analítica con Snowplow. Resolví crashes e incidencias en producción y trabajé en rendimiento, manteniendo la tasa de usuarios sin crashes por encima del 99,8 %.",
   "eng.team.label": "Colaboración y liderazgo",
