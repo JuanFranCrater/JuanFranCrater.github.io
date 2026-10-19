@@ -19,10 +19,19 @@ const es = {
   "ai.minimo.desc": "Remind, Tabata y Vault están hechas con la IA como apoyo en cada fase: idea, diseño, desarrollo, pruebas y publicación.",
   "beyond.text": "Cuando desconecto, lo normal es encontrarme perdido en un videojuego, metido en un libro o un manga, o viendo una buena película o serie con amigos. También me gusta participar en game jams, creando juegos desde cero en pocos días. Me encanta estar en plena naturaleza y soy un gran amante de los animales. Encantado de hablar de cualquiera de estos temas tomando un café.",
   "hero.headline": "Senior Mobile Engineer · Especialista en Android · Visión de producto y desarrollo con IA",
-  "hero.summary": "Senior Mobile Engineer con 8 años de experiencia llevando aplicaciones Android a producción, complementada con sólida experiencia en iOS y React Native. He trabajado en múltiples aplicaciones y webs a lo largo del desarrollo, la publicación y el mantenimiento, y he asumido de principio a fin las que aparecen en esta página. Combino visión de producto con IA, de la planificación a la publicación, para convertir ideas en apps cuidadas y lanzarlas con rapidez.",
+  "hero.summary": "Senior Mobile Engineer con 8 años de experiencia llevando aplicaciones Android a producción, complementada con sólida experiencia en iOS y algo de React Native. He trabajado en múltiples aplicaciones y webs a lo largo del desarrollo, la publicación y el mantenimiento, y he asumido de principio a fin las que aparecen en esta página. Combino visión de producto con IA, de la planificación a la publicación, para convertir ideas en apps cuidadas y lanzarlas con rapidez.",
   "hero.cv": "Descargar CV", "hero.contact": "Contactar",
   "exp.exoticca.date": "Abr 2022 – Sep 2026 · 4 años 6 meses", "exp.exoticca.role": "Mobile Engineer",
-  "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la primera línea de código. Empecé como único desarrollador Android, pasé a un equipo de dos y acabé como responsable único de las apps de Android e iOS (B2C y B2B). Diseñé y lancé funcionalidades de cero a producción, además de gestionar las publicaciones y el mantenimiento. Propuse mejoras de UX desde el punto de vista del usuario y ayudé a evolucionar las apps hacia una arquitectura brownfield con React Native. Trabajé con agentes de IA y GitHub Copilot para ir más rápido sin bajar la calidad.",
+  "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la primera línea de código. Empecé como único desarrollador Android, pasé a un equipo de dos y acabé como responsable único de las apps de Android e iOS (B2C y B2B). Fui responsable de Android durante todo el tiempo y, en el último año y medio, combiné ese rol con la responsabilidad de la app de iOS, como mobile owner de ambas. React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de cero a producción, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con agentes de IA y GitHub Copilot para ir más rápido sin bajar la calidad.",
+  "eng.title": "Enfoque de ingeniería",
+  "eng.int.label": "Integraciones",
+  "eng.int.text": "Librerías de pago como Redsys, gráficas con MPAndroidChart y dispositivos Android con hardware como impresoras Sunmi.",
+  "eng.arch.label": "Arquitectura",
+  "eng.arch.text": "Android nativo con MVVM, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. He tomado la mayoría de las decisiones de arquitectura en mis proyectos y he hecho migraciones de XML a Compose en el pasado.",
+  "eng.quality.label": "Calidad y fiabilidad",
+  "eng.quality.text": "Tests unitarios, mantenimiento del pipeline de CI/CD, monitorización de crashes, A/B testing y Remote Config con Firebase, y seguimiento de eventos de analítica con Snowplow. Resolví crashes e incidencias en producción y trabajé en rendimiento, manteniendo la tasa de usuarios sin crashes por encima del 99,8 %.",
+  "eng.team.label": "Colaboración y liderazgo",
+  "eng.team.text": "Revisiones de código, onboarding de nuevos desarrolladores y coordinación de lanzamientos con backend, UX, QA y producto.",
   "exp.csq.date": "Jun 2020 – Abr 2022 · 1 año 11 meses", "exp.csq.role": "Desarrollador de software",
   "exp.csq.desc": "Mantuve las aplicaciones Android de la empresa y desarrollé nuevas funcionalidades en apps, web y backend. Trabajé con librerías de pago (Redsys) y dispositivos Android con impresora (Sunmi).",
   "exp.tutor.date": "Abr 2020 – Abr 2022 · 2 años 1 mes", "exp.tutor.role": "Profesor particular de programación",
@@ -46,7 +55,7 @@ const es = {
   "proj.student": "Proyectos de estudios",
   "student.desc": "Proyectos realizados durante mis estudios, donde aprendí desarrollo móvil y diseño de videojuegos.",
   "proj.travelers.meta": "Android · iOS · 2022 – 2026",
-  "proj.travelers.desc": "App de viajes para clientes finales (B2C) de Exoticca. Participé en su desarrollo desde el inicio y diseñé y lancé funcionalidades en Android e iOS. Con el tiempo, la app evolucionó a una arquitectura brownfield con React Native.",
+  "proj.travelers.desc": "App de viajes para clientes finales (B2C) de Exoticca. Participé en su desarrollo desde el inicio y diseñé y lancé funcionalidades en Android e iOS. Más adelante se incorporó React Native.",
   "proj.mytrip.meta": "Android · iOS · B2B · 2026",
   "proj.mytrip.desc": "App compañera de viaje para las agencias B2B de Exoticca y sus viajeros. Desarrollada con IA en unas dos semanas, fue clave para retener a un cliente importante.",
   "tick.android": "Especialista en Android",
@@ -95,7 +104,7 @@ function apply() {
   langBtn.textContent = lang === "es" ? "EN" : "ES";
   const desc = lang === "es"
     ? "Senior Mobile Engineer · Especialista en Android con experiencia en iOS y React Native."
-    : "Senior Mobile Engineer · Android specialist with iOS and React Native expertise.";
+    : "Senior Mobile Engineer · Android specialist with iOS and React Native experience.";
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
 }
 
