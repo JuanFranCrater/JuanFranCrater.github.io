@@ -1,4 +1,14 @@
 const es = {
+  "nav.impact": "Producto y liderazgo",
+  "impact.intro": "Más allá de escribir código, lo que más disfruto es decidir qué construir, alinear a las personas implicadas y hacerlo llegar a los usuarios. Así lo he hecho.",
+  "impact.owner.title": "Responsabilidad de producto",
+  "impact.owner.desc": "Fui responsable de las decisiones de producto de My Trip, una app B2B para los socios de Exoticca y sus viajeros, desde la idea hasta la publicación en las tiendas, coordinándome con otros equipos. Ayudó a retener un contrato clave con un cliente.",
+  "impact.data.title": "Decisiones basadas en datos",
+  "impact.data.desc": "A/B testing y Remote Config con Firebase, y seguimiento de eventos de analítica con Snowplow, para medir y validar cambios, manteniendo la tasa de usuarios sin crashes por encima del 99,8 %.",
+  "impact.lead.title": "Liderazgo técnico",
+  "impact.lead.desc": "Revisiones de código, onboarding de nuevos desarrolladores y decisiones de arquitectura Android, como responsable de las apps móviles.",
+  "impact.coord.title": "Coordinación entre equipos",
+  "impact.coord.desc": "Coordinación de lanzamientos con backend, UX, QA y producto, desde la primera línea de código hasta la publicación en las tiendas.",
   "nav.experience": "Experiencia", "nav.projects": "Proyectos", "nav.skills": "Tecnologías",
   "nav.education": "Formación",   "nav.contact": "Contacto",
   "nav.beyond": "Más allá del código", "nav.ai": "Construyendo con IA",
@@ -19,7 +29,7 @@ const es = {
   "ai.minimo.desc": "Remind, Tabata y Vault están hechas con la IA como apoyo en cada fase: idea, diseño, desarrollo, pruebas y publicación.",
   "beyond.text": "Cuando desconecto, lo normal es encontrarme perdido en un videojuego, metido en un libro o un manga, o viendo una buena película o serie con amigos. También me gusta participar en game jams, creando juegos desde cero en pocos días. Me encanta estar en plena naturaleza y soy un gran amante de los animales. Encantado de hablar de cualquiera de estos temas tomando un café.",
   "hero.headline": "Senior Mobile Engineer · Especialista en Android · Visión de producto y desarrollo con IA",
-  "hero.summary": "Senior Mobile Engineer con 8 años de experiencia llevando aplicaciones Android a producción, complementada con sólida experiencia en iOS y algo de React Native. He trabajado en múltiples aplicaciones y webs a lo largo del desarrollo, la publicación y el mantenimiento, y he asumido de principio a fin las que aparecen en esta página. Combino visión de producto con IA, de la planificación a la publicación, para convertir ideas en apps cuidadas y lanzarlas con rapidez.",
+  "hero.summary": "Senior Mobile Engineer con 8 años de experiencia llevando aplicaciones Android a producción, complementada con sólida experiencia en iOS y algo de React Native. He trabajado en múltiples aplicaciones y webs a lo largo del desarrollo, la publicación y el mantenimiento, y he asumido de principio a fin las que aparecen en esta página. Combino visión de producto con IA, de la planificación a la publicación, para convertir ideas en apps cuidadas y lanzarlas con rapidez. También tomo decisiones de producto, coordino lanzamientos entre equipos y apoyo a otros desarrolladores con revisiones de código y onboarding.",
   "hero.cv": "Descargar CV", "hero.contact": "Contactar",
   "exp.exoticca.date": "Abr 2022 – Sep 2026 · 4 años 6 meses", "exp.exoticca.role": "Mobile Engineer",
   "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la primera línea de código. Empecé como único desarrollador Android, pasé a un equipo de dos y acabé como responsable único de las apps de Android e iOS (B2C y B2B). Fui responsable de Android durante todo el tiempo y, en el último año y medio, combiné ese rol con la responsabilidad de la app de iOS, como mobile owner de ambas. React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de cero a producción, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con agentes de IA y GitHub Copilot para ir más rápido sin bajar la calidad.",
@@ -85,7 +95,7 @@ const es = {
   "edu.group.edu": "Formación", "edu.group.tech": "Tecnología", "edu.group.lang": "Idiomas", "edu.group.other": "Otros",
   "cert.googleai": "Certificado Profesional de IA de Google · Google",
   "langs": "Idiomas: español (nativo), inglés (nivel profesional)",
-  "contact.looking": "Busco activamente un puesto como Senior Android Engineer, Mobile Lead o un rol de Mobile Engineer orientado a producto, en remoto o en Málaga. Si te encaja, hablemos.",
+  "contact.looking": "Busco activamente un puesto como Senior Android Engineer, Tech Lead o Mobile Lead, o un rol orientado a producto como Product Owner o Product Manager, en remoto o en Málaga. Si te encaja, hablemos.",
   "skills.Mobile": "Móvil", "skills.Frontend & Backend": "Frontend y backend", "skills.Practices": "Prácticas y otros", "skills.Game Development": "Desarrollo de videojuegos",
   "lvl.Extensive Experience": "Amplia experiencia", "lvl.Advanced": "Avanzado", "lvl.Intermediate": "Intermedio", "lvl.Basic": "Básico", "lvl.Basic-Intermediate": "Básico-intermedio"
 };
