@@ -82,6 +82,10 @@ h2 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; color: var(--mut
 .links a + a { margin-left: .9rem; }
 .grid.sub { margin-top: 1rem; }
 .grid.sub .card { background: var(--bg); padding: 1rem; }
+.grid.compact .card { padding: .75rem 1rem; }
+.grid.compact .card h4 { font-size: 1rem; margin-bottom: .2rem; }
+.grid.compact .card p { font-size: .9rem; margin: .2rem 0 .4rem; }
+.grid.compact .card .tags { margin-top: .3rem; }
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -105,8 +109,6 @@ h2 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; color: var(--mut
 @media (max-width: 600px) { .car-btn { display: none; } }
 .skill-group h4 { margin: 0 0 .75rem; }
 .skill { margin-bottom: .8rem; font-size: .9rem; display: block; }
-.skill .bar { height: 6px; background: var(--border); border-radius: 999px; overflow: hidden; margin-top: .3rem; }
-.skill .bar i { display: block; height: 100%; background: var(--accent); }
 .skill .lvl { display: block; color: var(--muted); font-size: .8rem; margin-top: .1rem; }
 
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
