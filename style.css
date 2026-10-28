@@ -48,7 +48,8 @@ h2 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); font-weight: 500; color: var(--mut
   border: 1px solid var(--border); background: var(--surface); color: var(--text);
   padding: .55rem 1.1rem; border-radius: 10px; font-weight: 500;
 }
-.btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: #0b141c; border-color: var(--accent); font-weight: 600; }
+:root[data-theme="light"] .btn.primary { color: #fff; }
 .btn:hover { text-decoration: none; filter: brightness(1.1); }
 
 .section-title { font-size: 1.6rem; margin: 0 0 .75rem; }

@@ -10,7 +10,7 @@ const es = {
   "impact.coord.title": "Coordinación entre equipos",
   "impact.coord.desc": "Coordiné lanzamientos con backend, UX, QA y producto, desde la primera línea de código hasta la publicación en las tiendas.",
   "nav.experience": "Experiencia", "nav.projects": "Proyectos", "nav.skills": "Tecnologías",
-  "nav.education": "Formación",   "nav.contact": "Contacto",
+  "nav.education": "Formación", "edu.title": "Formación y certificaciones", "nav.contact": "Contacto",
   "nav.beyond": "Más allá del código", "nav.ai": "Construyendo con IA",
   "ai.intro": "La IA forma parte de mi forma de trabajar cada día, no es un añadido. Yo pongo la visión de producto y tomo las decisiones, y uso la IA para planificar, construir y probar más rápido, revisando siempre lo que genera. Me permite llevar una idea del concepto a la publicación en días en lugar de semanas, y estoy convencido de que seguirá transformando cómo se crean el software y los productos. Estos son algunos casos reales en los que la he aplicado.",
   "ai.mytrip.title": "My Trip (B2B) · Exoticca",
@@ -33,7 +33,7 @@ const es = {
   "hero.summary": "Senior Mobile Engineer con 8 años de experiencia llevando aplicaciones Android a producción, complementada con sólida experiencia en iOS y algo de React Native. He trabajado en múltiples aplicaciones móviles a lo largo del desarrollo, la publicación y el mantenimiento, con responsabilidad de principio a fin sobre las que destaco aquí. Combino visión de producto con IA, de la planificación a la publicación, para convertir ideas en apps cuidadas y lanzarlas con rapidez. Más allá de escribir código, también tomo decisiones de producto, coordino lanzamientos entre equipos y apoyo a otros desarrolladores con revisiones de código y onboarding.",
   "hero.cv": "Descargar CV", "hero.contact": "Contactar",
   "exp.exoticca.date": "Abr 2022 – Sep 2026 · 4 años 6 meses", "exp.exoticca.role": "Mobile Engineer",
-  "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la primera línea de código. Empecé como único desarrollador Android, pasé a un equipo de dos y fui responsable de Android durante toda mi etapa, pasando en el último año y medio a ser el único desarrollador y mobile owner de ambas apps, Android e iOS (B2C y B2B). React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de cero a producción, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con agentes de IA y GitHub Copilot para ir más rápido sin bajar la calidad.",
+  "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la <strong>primera línea de código</strong>. Empecé como único desarrollador Android, pasé a un equipo de dos y fui responsable de Android durante toda mi etapa, pasando en el último año y medio a ser el <strong>único desarrollador y mobile owner de ambas apps, Android e iOS</strong> (B2C y B2B). React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de <strong>cero a producción</strong>, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con <strong>agentes de IA y GitHub Copilot</strong> para ir más rápido sin bajar la calidad.",
   "eng.title": "Enfoque de ingeniería",
   "eng.int.label": "Integraciones",
   "eng.int.text": "Librerías de pago como Redsys, gráficas con MPAndroidChart y dispositivos Android con hardware como impresoras Sunmi.",
@@ -98,8 +98,8 @@ const es = {
   "cert.apple": "Develop apps for Apple platforms · Apple",
   "cert.uimp": "Curso de inmersión en lengua inglesa, Intermediate 2 (B2) · Universidad Internacional Menéndez Pelayo",
   "langs.short": "Español (nativo), inglés (nivel profesional)",
-  "edu.group.edu": "Formación", "edu.group.tech": "Tecnología", "edu.group.lang": "Idiomas", "edu.group.other": "Otros",
-  "edu.group.product": "Producto y Agile", "cert.agile": "Certificado Profesional Google Agile Essentials · Google (Coursera)",
+  "edu.group.edu": "Formación", "edu.group.tech": "Tecnología", "edu.group.lang": "Idiomas",
+  "edu.group.product": "Producto, Agile y otros", "cert.agile": "Certificado Profesional Google Agile Essentials · Google (Coursera)",
   "cert.googleai": "Certificado Profesional de IA de Google · Google",
   "contact.looking": "Busco activamente un puesto como Senior Android Engineer, Tech Lead o Mobile Lead, o un rol orientado a producto donde pueda combinar ingeniería y responsabilidad de producto, en remoto o en Málaga. Si te encaja, hablemos.",
   "skills.Mobile": "Móvil", "skills.Other": "Otros", "skills.Practices": "Prácticas y otros",
@@ -108,7 +108,7 @@ const es = {
 
 const nodes = document.querySelectorAll("[data-i18n]");
 const en = {};
-nodes.forEach(n => { en[n.dataset.i18n] = n.textContent; });
+nodes.forEach(n => { en[n.dataset.i18n] = n.innerHTML; });
 
 const root = document.documentElement;
 const langBtn = document.getElementById("lang");
@@ -118,12 +118,12 @@ function t(key, fallback) { return lang === "es" ? (es[key] || fallback) : (en[k
 
 function apply() {
   root.lang = lang;
-  nodes.forEach(n => { n.textContent = lang === "es" ? (es[n.dataset.i18n] ?? en[n.dataset.i18n]) : en[n.dataset.i18n]; });
+  nodes.forEach(n => { n.innerHTML = lang === "es" ? (es[n.dataset.i18n] ?? en[n.dataset.i18n]) : en[n.dataset.i18n]; });
   document.querySelectorAll("[data-cv]").forEach(a => { a.href = lang === "es" ? "assets/cv-es.pdf" : "assets/cv-en.pdf"; });
   langBtn.textContent = lang === "es" ? "EN" : "ES";
   const desc = lang === "es"
-    ? "Senior Mobile Engineer · Especialista en Android con experiencia en iOS y React Native."
-    : "Senior Mobile Engineer · Android specialist with iOS and React Native experience.";
+    ? "Senior Mobile Engineer (8 años en Android, iOS y React Native). Visión de producto y desarrollo con IA, combinando liderazgo técnico y responsabilidad end-to-end."
+    : "Senior Mobile Engineer (8 years Android, iOS & React Native). Product-minded and AI-driven, combining technical leadership and end-to-end mobile ownership.";
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
 }
 
