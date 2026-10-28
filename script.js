@@ -36,7 +36,7 @@ const es = {
   "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la <strong>primera línea de código</strong>. Empecé como único desarrollador Android, pasé a un equipo de dos y fui responsable de Android durante toda mi etapa, pasando en el último año y medio a ser el <strong>único desarrollador y mobile owner de ambas apps, Android e iOS</strong> (B2C y B2B). React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de <strong>cero a producción</strong>, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con <strong>agentes de IA y GitHub Copilot</strong> para ir más rápido sin bajar la calidad.",
   "eng.title": "Enfoque de ingeniería",
   "eng.int.label": "Integraciones",
-  "eng.int.text": "Librerías de pago como Redsys, gráficas con MPAndroidChart y dispositivos Android con hardware como impresoras Sunmi.",
+  "eng.int.text": "SDKs de soporte al cliente y comunicación como Sprinklr Live Chat y Salesforce Marketing Cloud (notificaciones push y mensajes in-app) en Android e iOS, librerías de pago (Redsys), gráficas (MPAndroidChart) y dispositivos Android con hardware como impresoras Sunmi.",
   "eng.arch.label": "Arquitectura",
   "eng.arch.text": "Android nativo con Kotlin Coroutines y Flow, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. He trabajado con MVVM, MVC y MVP, he tomado la mayoría de las decisiones de arquitectura en mis proyectos y he hecho migraciones de XML a Compose en el pasado. En iOS mantuve y evolucioné una app en producción con arquitectura VIPER, combinando pantallas en SwiftUI y UIKit y gestión de dependencias con SPM y CocoaPods.",
   "eng.quality.label": "Calidad y fiabilidad",
