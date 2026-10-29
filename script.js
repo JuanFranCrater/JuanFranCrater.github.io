@@ -74,7 +74,7 @@ const es = {
   "proj.travelers.meta": "Android · iOS · 2022 – 2026",
   "proj.travelers.desc": "App de viajes para clientes finales (B2C) de Exoticca. Participé en su desarrollo desde el inicio y diseñé y lancé funcionalidades en Android e iOS. Más adelante se incorporó React Native.",
   "proj.mytrip.meta": "Android · iOS · B2B · 2026",
-  "proj.mytrip.desc": "App compañera de viaje para las agencias B2B de Exoticca y sus viajeros. Desarrollada con IA en unas dos semanas, fue clave para retener a un cliente importante.",
+  "proj.mytrip.desc": "App compañera de viaje para las agencias B2B de Exoticca y sus viajeros. Desarrollada con IA en unas dos semanas, fue clave para retener a un cliente importante.", "rating.note": "(durante mi etapa en Exoticca)",
   "tick.android": "Especialista en Android",
   "tick.platforms": "Experiencia en iOS y React Native",
   "tick.owner": "Responsabilidad total de apps móviles",
