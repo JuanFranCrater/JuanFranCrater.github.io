@@ -67,7 +67,7 @@ const es = {
   "other.desc": "Herramientas personales que creo para resolver mis propios problemas.",
   "proj.jobscout.meta": "Python · Herramienta personal · 2026",
   "proj.jobscout.desc": "Herramienta de automatización local que rastrea y selecciona ofertas de empleo relevantes en español e inglés, verifica la fecha real de publicación, descarta agregadores y cruza datos con Gmail para mostrar solo oportunidades nuevas en un panel web estático. Creada con Google Antigravity, usando Claude y Gemini.",
-  "proj.remind.meta": "Android · 2026",
+  "proj.remind.meta": "Android · Octubre 2026",
   "proj.remind.desc": "App de recordatorios de eventos con widget en la pantalla de inicio que muestra tu próximo evento y accesos rápidos a la lista y a crear eventos.",
   "proj.student": "Proyectos de estudios",
   "student.desc": "Proyectos realizados durante mis estudios, donde aprendí desarrollo móvil y diseño de videojuegos.",
@@ -204,7 +204,7 @@ document.addEventListener('click', e => {
   else if (href.startsWith('mailto:')) name = 'email';
   else if (href.includes('linkedin.com')) name = 'linkedin';
   else if (href.includes('github.com')) name = 'github';
-  else if (href.includes('play.google.com')) name = 'google-play-' + (href.includes('.partners') ? 'my-trip' : 'travelers');
+  else if (href.includes('play.google.com')) name = 'google-play-' + (href.includes('.partners') ? 'my-trip' : (href.includes('com.minimo.remind') ? 'remind' : 'travelers'));
   else if (href.includes('apps.apple.com')) name = 'app-store-' + (href.includes('id6795553466') ? 'my-trip' : 'travelers');
   if (!name) return;
   const section = a.closest('section');
