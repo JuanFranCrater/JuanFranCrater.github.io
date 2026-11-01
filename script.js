@@ -8,18 +8,18 @@ const es = {
   "impact.lead.title": "Liderazgo técnico",
   "impact.lead.desc": "Incorporé y acompañé a otros desarrolladores móviles con revisiones de código en Android e iOS, y tomé las decisiones de arquitectura Android como responsable de las apps móviles. También formé a desarrolladores web frontend en la implementación de React Native, para que el equipo pudiera seguir evolucionando las apps sin depender de mí.",
   "impact.coord.title": "Coordinación entre equipos",
-  "impact.coord.desc": "Coordiné lanzamientos con backend, UX, QA y producto, desde la primera línea de código hasta la publicación en las tiendas.",
+  "impact.coord.desc": "Coordiné lanzamientos con backend, UX, QA y producto, desde el desarrollo hasta la publicación en las tiendas.",
   "nav.experience": "Experiencia", "nav.projects": "Proyectos", "nav.skills": "Tecnologías",
   "nav.education": "Formación", "edu.title": "Formación y certificaciones", "nav.contact": "Contacto",
   "nav.beyond": "Más allá del código", "nav.ai": "Construyendo con IA",
-  "ai.intro": "La IA forma parte de mi forma de trabajar cada día, no es un añadido. Yo pongo la visión de producto y tomo las decisiones, y uso la IA para planificar, construir y probar más rápido, revisando siempre lo que genera. Me permite llevar una idea del concepto a la publicación en días en lugar de semanas, y estoy convencido de que seguirá transformando cómo se crean el software y los productos. Estos son algunos casos reales en los que la he aplicado.",
+  "ai.intro": "La IA forma parte de mi forma de trabajar cada día, no es un añadido. Yo pongo la visión de producto y tomo las decisiones, y uso la IA para planificar, construir y probar más rápido, revisando siempre lo que genera. Me permite llevar una idea del concepto a la publicación en días en lugar de semanas, y estoy convencido de que seguirá transformando cómo se crean el software y los productos. Estos son casos reales en los que la he aplicado de principio a fin.",
   "ai.mytrip.title": "My Trip (B2B) · Exoticca",
   "ai.mytrip.meta": "Android · iOS",
   "ai.mytrip.desc": "Adapté el código de la app de viajeros a una nueva app B2B con un flujo de trabajo basado en IA. Me encargué de las decisiones de producto y usé la IA para planificar y ejecutar el desarrollo, revisando siempre su resultado. Desarrollada en una semana aproximadamente, seguida de otra de pulido y coordinación con otros equipos para publicar. El resultado fue crítico para el negocio: ayudó a mantener el contrato con un cliente clave.",
   "ai.product.title": "Visión de producto",
   "ai.product.desc": "Siempre pienso en las personas que usan la app. Me pongo en el lugar del cliente, busco fricciones en la experiencia y propongo mejoras de UX, no solo construyo lo que se pide. Los buenos productos nacen de entender primero al usuario y después la tecnología.",
   "ai.tools.title": "Mi kit de IA",
-  "ai.tools.desc": "La IA cambia constantemente, así que la trato como una habilidad en la que sigo aprendiendo, probando siempre nuevas herramientas y modelos y quedándome con lo que realmente funciona.",
+  "ai.tools.desc": "Creo que la IA ha llegado para quedarse: es el futuro y cambia muy rápido. Por eso la trato como una habilidad en la que sigo aprendiendo, probando siempre nuevas herramientas y modelos y quedándome con lo que realmente funciona.",
   "ai.tools.coding": "Asistentes y agentes de código",
   "ai.tools.coding.desc": "GitHub Copilot es mi herramienta del día a día, complementada con Cursor, Junie, Google Antigravity y Gemini en el navegador.",
   "ai.tools.models": "Modelos y contexto",
@@ -33,7 +33,7 @@ const es = {
   "hero.summary": "Senior Mobile Engineer con 8 años de experiencia llevando aplicaciones Android a producción, complementada con sólida experiencia en iOS y algo de React Native. He trabajado en múltiples aplicaciones móviles a lo largo del desarrollo, la publicación y el mantenimiento, con responsabilidad de principio a fin sobre las que destaco aquí. Combino visión de producto con IA, de la planificación a la publicación, para convertir ideas en apps cuidadas y lanzarlas con rapidez. Más allá de escribir código, también tomo decisiones de producto, coordino lanzamientos entre equipos y apoyo a otros desarrolladores con revisiones de código y onboarding.",
   "hero.cv": "Descargar CV", "hero.contact": "Contactar",
   "exp.exoticca.date": "Abr 2022 – Sep 2026 · 4 años 6 meses", "exp.exoticca.role": "Senior Mobile Engineer (Android Lead)",
-  "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la <strong>primera línea de código</strong>. Empecé como único desarrollador Android, pasé a un equipo de dos y fui responsable de Android durante toda mi etapa, pasando en el último año y medio a ser el <strong>único desarrollador y mobile owner de ambas apps, Android e iOS</strong> (B2C y B2B). React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de <strong>cero a producción</strong>, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con <strong>agentes de IA y GitHub Copilot</strong> para ir más rápido sin bajar la calidad. Trabajé a diario en inglés en un entorno multidisciplinar, liderando revisiones de código, arquitectura técnica y coordinación de lanzamientos.",
+  "exp.exoticca.desc": "Participé en las apps móviles de Exoticca desde la <strong>primera línea de código</strong>. Empecé como único desarrollador Android, pasé a un equipo de dos y fui responsable de Android durante toda mi etapa, pasando en el último año y medio a ser el <strong>único desarrollador y mobile owner de ambas apps, Android e iOS</strong> (B2C y B2B). React Native llegó solo en los últimos tres meses. Diseñé y lancé funcionalidades de <strong>cero a producción</strong>, además de gestionar las publicaciones y el mantenimiento, y aporté ideas de UX desde el punto de vista del usuario. Trabajé con <strong>agentes de IA y GitHub Copilot</strong> para ir más rápido sin bajar la calidad. Mi día a día era en inglés, dentro de un equipo multidisciplinar, liderando revisiones de código, arquitectura técnica y coordinación de lanzamientos.",
   "eng.title": "Enfoque de ingeniería",
   "eng.int.label": "Integraciones",
   "eng.int.text": "SDKs de soporte al cliente y comunicación como Sprinklr Live Chat y Salesforce Marketing Cloud (notificaciones push y mensajes in-app) en Android e iOS, librerías de pago (Redsys), gráficas (MPAndroidChart) y dispositivos Android con hardware como impresoras Sunmi.",
@@ -55,7 +55,6 @@ const es = {
   "footer.analytics": "Analítica sin cookies con GoatCounter",
   "badge.done": "Completado",
   "badge.wip": "En desarrollo",
-  "badge.pending": "Pendiente de publicación",
   "badge.early": "Fase inicial",
   "proj.tabata.meta": "Android · 2026",
   "proj.tabata.desc": "Temporizador de intervalos para entrenamientos tipo Tabata, con fases de trabajo, descanso y ciclos, avisos sonoros y seguimiento del progreso.",
@@ -67,14 +66,14 @@ const es = {
   "other.desc": "Herramientas personales que creo para resolver mis propios problemas.",
   "proj.jobscout.meta": "Python · Herramienta personal · 2026",
   "proj.jobscout.desc": "Herramienta de automatización local que rastrea y selecciona ofertas de empleo relevantes en español e inglés, verifica la fecha real de publicación, descarta agregadores y cruza datos con Gmail para mostrar solo oportunidades nuevas en un panel web estático. Creada con Google Antigravity, usando Claude y Gemini.",
-  "proj.remind.meta": "Android · Octubre 2026",
+  "proj.remind.meta": "Android · octubre de 2026",
   "proj.remind.desc": "App de recordatorios de eventos con widget en la pantalla de inicio que muestra tu próximo evento y accesos rápidos a la lista y a crear eventos.",
   "proj.student": "Proyectos de estudios",
   "student.desc": "Proyectos realizados durante mis estudios, donde aprendí desarrollo móvil y diseño de videojuegos.",
   "proj.travelers.meta": "Android · iOS · 2022 – 2026",
-  "proj.travelers.desc": "App de viajes para clientes finales (B2C) de Exoticca. Participé en su desarrollo desde el inicio y diseñé y lancé funcionalidades en Android e iOS. Más adelante se incorporó React Native.",
+  "proj.travelers.desc": "App de viajes para clientes finales (B2C) de Exoticca. Participé en su desarrollo desde el inicio y diseñé y lancé funcionalidades de cero a producción en Android e iOS. Más adelante se incorporó React Native.",
   "proj.mytrip.meta": "Android · iOS · B2B · 2026",
-  "proj.mytrip.desc": "App compañera de viaje para las agencias B2B de Exoticca y sus viajeros. Desarrollada con IA en unas dos semanas, fue clave para retener a un cliente importante.", "rating.note": "(durante mi etapa en Exoticca)",
+  "proj.mytrip.desc": "App compañera de viaje para los socios B2B de Exoticca y sus viajeros. Desarrollada con IA en unas dos semanas, ayudó a mantener el contrato con un cliente clave.", "rating.note": "(durante mi etapa en Exoticca)",
   "tick.android": "Especialista en Android",
   "tick.platforms": "Experiencia en iOS y React Native",
   "tick.owner": "Responsabilidad total de apps móviles",
@@ -82,6 +81,9 @@ const es = {
   "tick.ai": "Desarrollo con IA",
   "tick.product": "Visión de producto",
   "tick.stack": "Kotlin · Jetpack Compose · Swift",
+  "tag.aiDriven": "Con IA", "tag.productDecisions": "Decisiones de producto", "tag.userStories": "Historias de usuario",
+  "tag.productThinking": "Visión de producto", "tag.contextFiles": "Archivos de contexto", "tag.automation": "Automatización", "tag.aiAgents": "Agentes de IA",
+  "rating.stores": "Google Play y App Store",
   "more.minimo": "Conoce más sobre MINIMO ↓",
   "more.mytrip": "Cómo usé la IA para lograrlo ↓",
   "proj.nicemeet.meta": "Proyecto de estudios · 2018 – 2019",
@@ -97,10 +99,10 @@ const es = {
   "langs.short": "Español (nativo), inglés (competencia profesional completa)",
   "edu.group.edu": "Formación", "edu.group.tech": "Tecnología", "edu.group.lang": "Idiomas",
   "edu.group.product": "Producto, Agile y otros", "cert.agile": "Certificado Profesional Google Agile Essentials · Google (Coursera)",
-  "cert.googleai": "Certificado Profesional de IA de Google · Google",
+  "cert.googleai": "Certificado Profesional de IA de Google · Google (Coursera)",
   "cert.kmp": "Kotlin avanzado para desarrollo multiplataforma · Board Infinity (Coursera)",
   "contact.looking": "Busco activamente un puesto como Senior Android Engineer, Tech Lead o Mobile Lead, o un rol orientado a producto donde pueda combinar ingeniería y responsabilidad de producto, en remoto o en Málaga. Si te encaja, hablemos.",
-  "skills.Mobile": "Móvil", "skills.Other": "Otros", "skills.Practices": "Prácticas y otros",
+  "skills.Mobile": "Móvil", "skills.Other": "Otros", "skills.Practices": "Buenas prácticas",
   "lvl.Extensive Experience": "Amplia experiencia", "lvl.Advanced": "Avanzado", "lvl.Intermediate": "Intermedio", "lvl.Basic": "Básico", "lvl.Basic-Intermediate": "Básico-intermedio"
 };
 
@@ -120,8 +122,8 @@ function apply() {
   document.querySelectorAll("[data-cv]").forEach(a => { a.href = lang === "es" ? "assets/cv-es.pdf" : "assets/cv-en.pdf"; });
   langBtn.textContent = lang === "es" ? "EN" : "ES";
   const desc = lang === "es"
-    ? "Senior Mobile Engineer (8 años en Android, iOS y React Native). Visión de producto y desarrollo con IA, combinando liderazgo técnico y responsabilidad end-to-end."
-    : "Senior Mobile Engineer (8 years Android, iOS & React Native). Product-minded and AI-driven, combining technical leadership and end-to-end mobile ownership.";
+    ? "Senior Mobile Engineer (8 años en Android, además de iOS y React Native). Visión de producto y desarrollo con IA, combinando liderazgo técnico y responsabilidad end-to-end."
+    : "Senior Mobile Engineer (8 years of Android, plus iOS & React Native). Product-minded and AI-driven, combining technical leadership and end-to-end mobile ownership.";
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
 }
 
