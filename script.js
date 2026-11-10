@@ -99,7 +99,7 @@ const es = {
   "langs.short": "Español (nativo), inglés (competencia profesional completa)",
   "edu.group.edu": "Formación", "edu.group.tech": "Tecnología", "edu.group.lang": "Idiomas",
   "edu.group.product": "Producto, Agile y otros", "cert.agile": "Certificado Profesional Google Agile Essentials · Google (Coursera)",
-  "cert.googleai": "Certificado Profesional de IA de Google · Google (Coursera)",
+  "cert.pm": "Fundamentos de la gestión de proyectos · Google (Coursera)", "cert.googleai": "Certificado Profesional de IA de Google · Google (Coursera)",
   "cert.kmp": "Kotlin avanzado para desarrollo multiplataforma · Board Infinity (Coursera)",
   "contact.looking": "Busco activamente un puesto como Senior Android Engineer, Tech Lead o Mobile Lead, o un rol orientado a producto donde pueda combinar ingeniería y responsabilidad de producto, en remoto o en Málaga. Si te encaja, hablemos.",
   "skills.Mobile": "Móvil", "skills.Other": "Otros", "skills.Practices": "Buenas prácticas",
