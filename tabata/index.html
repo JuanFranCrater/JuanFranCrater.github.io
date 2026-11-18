@@ -7,7 +7,18 @@
     <meta name="description" content="Minimalist Tabata interval workout timer">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="manifest" href="manifest.json">
+    <link rel="preload" href="tabata.js" as="script">
+    <link rel="preload" href="658820f72b4617efb380.wasm" as="fetch" type="application/wasm" crossorigin>
+    <link rel="preload" href="e9ee478cf3c378f3e4ba.wasm" as="fetch" type="application/wasm" crossorigin>
     <title>Tabata</title>
+    <script>
+        if (window.location.protocol === "file:") {
+            window.location.replace("https://juanfrancrater.github.io/tabata/");
+        }
+        if ("serviceWorker" in navigator && window.location.protocol.startsWith("http")) {
+            navigator.serviceWorker.register("sw.js").catch(function() {});
+        }
+    </script>
     <style>
         html, body {
             width: 100%;
@@ -15,13 +26,99 @@
             margin: 0;
             padding: 0;
             background-color: #14161A;
+            color: #F4F1EA;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
             overflow: hidden;
             -webkit-tap-highlight-color: transparent;
             user-select: none;
         }
+        #loader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background-color: #14161A;
+            z-index: 9999;
+            transition: opacity 0.25s ease;
+        }
+        #loader .ring {
+            width: 56px;
+            height: 56px;
+            border: 3px solid rgba(217, 212, 199, 0.18);
+            border-top-color: #E4572E;
+            border-radius: 50%;
+            animation: spin 0.85s linear infinite;
+        }
+        #loader .title {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: #F4F1EA;
+        }
+        #loader .bar-track {
+            width: 180px;
+            height: 3px;
+            background: rgba(217, 212, 199, 0.16);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        #loader .bar-fill {
+            height: 100%;
+            width: 15%;
+            background: #E4572E;
+            border-radius: 3px;
+            transition: width 0.25s ease;
+        }
+        #loader .sub {
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            color: #D9D4C7;
+            opacity: 0.75;
+            text-transform: uppercase;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
+    <div id="loader">
+        <div class="ring"></div>
+        <div class="title">TABATA</div>
+        <div class="bar-track"><div class="bar-fill" id="loader-bar"></div></div>
+        <div class="sub" id="loader-sub">Loading timer…</div>
+    </div>
+    <script>
+        (function() {
+            const isEs = (navigator.language || "").toLowerCase().startsWith("es");
+            const sub = document.getElementById("loader-sub");
+            const bar = document.getElementById("loader-bar");
+            if (sub && isEs) sub.textContent = "Cargando temporizador…";
+
+            let pct = 15;
+            const timer = setInterval(function() {
+                pct += (92 - pct) * 0.18;
+                if (bar) bar.style.width = pct.toFixed(1) + "%";
+            }, 200);
+
+            const observer = new MutationObserver(function() {
+                if (document.querySelector("canvas")) {
+                    clearInterval(timer);
+                    if (bar) bar.style.width = "100%";
+                    const loader = document.getElementById("loader");
+                    if (loader) {
+                        loader.style.opacity = "0";
+                        setTimeout(function() { loader.remove(); }, 220);
+                    }
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
+        })();
+    </script>
     <script src="tabata.js"></script>
 </body>
 </html>
