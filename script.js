@@ -26,7 +26,7 @@ const es = {
   "ai.tools.models.desc": "Principalmente modelos de Claude y ChatGPT, con archivos de contexto (como CLAUDE.md) que dan a los agentes el conocimiento adecuado de cada proyecto. Gemini para investigación y temas de Android fuera del código.",
   "ai.minimo.title": "Apps de MINIMO",
   "ai.minimo.meta": "Proyectos personales · 2026",
-  "ai.minimo.desc": "Remind, Tabata, Vault y Schedule están hechas con la IA como apoyo en cada fase: idea, diseño, desarrollo, pruebas y publicación.",
+  "ai.minimo.desc": "Remind, Tabata, Schedule y Vault están hechas con la IA como apoyo en cada fase: idea, diseño, desarrollo, pruebas y publicación.",
   "beyond.text": "Cuando desconecto, lo normal es encontrarme perdido en un videojuego, metido en un libro o un manga, o viendo una buena película o serie con amigos. También me gusta participar en game jams, creando juegos desde cero en pocos días. Me encanta estar en plena naturaleza y soy un gran amante de los animales. Encantado de hablar de cualquiera de estos temas tomando un café.",
   "hero.headline": "Senior Mobile Engineer · Especialista en Android · Visión de producto y desarrollo con IA",
   "hero.location": "Málaga, España · En remoto o en Málaga",
@@ -38,7 +38,7 @@ const es = {
   "eng.int.label": "Integraciones",
   "eng.int.text": "SDKs de soporte al cliente y comunicación como Sprinklr Live Chat y Salesforce Marketing Cloud (notificaciones push y mensajes in-app) en Android e iOS, librerías de pago (Redsys), gráficas (MPAndroidChart) y dispositivos Android con hardware como impresoras Sunmi.",
   "eng.arch.label": "Arquitectura",
-  "eng.arch.text": "Android nativo con Kotlin Coroutines y Flow, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. Aplico Clean Architecture con MVVM o MVI (también MVC y MVP) y he tomado la mayoría de las decisiones de arquitectura en mis proyectos. En Exoticca, la app Android pasó de MVVM a MVI al migrar de XML a Compose, e introduje la modularización como prueba para Kotlin Multiplatform (KMP). Mis apps de MINIMO sirven de banco de pruebas: algunas son modulares y estoy migrando una a KMP. En iOS mantuve y evolucioné una app en producción con arquitectura VIPER, combinando SwiftUI y UIKit y dependencias con SPM y CocoaPods.",
+  "eng.arch.text": "Android nativo con Kotlin Coroutines y Flow, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. Aplico Clean Architecture con MVVM o MVI (también MVC y MVP) y he tomado la mayoría de las decisiones de arquitectura en mis proyectos. En Exoticca, la app Android pasó de MVVM a MVI al migrar de XML a Compose, e introduje la modularización como prueba para Kotlin Multiplatform (KMP). Mis apps de MINIMO sirven de banco de pruebas: algunas son modulares y una funciona en Android y en la web con KMP. En iOS mantuve y evolucioné una app en producción con arquitectura VIPER, combinando SwiftUI y UIKit y dependencias con SPM y CocoaPods.",
   "eng.quality.label": "Calidad y fiabilidad",
   "eng.quality.text": "Tests unitarios y de UI con Compose, mantenimiento del pipeline de CI/CD, monitorización de crashes y análisis de rendimiento con Firebase Performance, tanto en Android como en iOS. Resolví crashes e incidencias en producción, manteniendo la tasa de usuarios sin crashes por encima del 99,8 %.",
   "eng.team.label": "Colaboración y liderazgo",
@@ -56,8 +56,10 @@ const es = {
   "badge.done": "Completado",
   "badge.wip": "En desarrollo",
   "badge.early": "Fase inicial",
+  "badge.webLive": "Web · Publicada",
+  "badge.androidTesting": "Android · Pendiente",
   "proj.tabata.meta": "Android · Web (KMP) · 2026",
-  "proj.tabata.desc": "Temporizador de intervalos para entrenamientos tipo Tabata, con fases de trabajo, descanso y ciclos, avisos sonoros y seguimiento del progreso. En migración a Kotlin Multiplatform (KMP) para funcionar en Android y en la web.",
+  "proj.tabata.desc": "Temporizador de intervalos para entrenamientos tipo Tabata, con fases de trabajo, descanso y ciclos, avisos sonoros y seguimiento del progreso. Desarrollada con Kotlin Multiplatform (KMP) para funcionar en Android y en la web.",
   "proj.vault.meta": "Android · 2026",
   "proj.vault.desc": "App de finanzas personales para controlar tu dinero de forma sencilla y sin distracciones.",
   "proj.schedule.meta": "Android · 2026",
@@ -86,6 +88,8 @@ const es = {
   "rating.stores": "Google Play y App Store",
   "more.minimo": "Conoce más sobre MINIMO ↓",
   "more.mytrip": "Cómo usé la IA para lograrlo ↓",
+  "link.webapp": "App web ↗",
+  "link.about": "Sobre la app →",
   "proj.nicemeet.meta": "Proyecto de estudios · 2018 – 2019",
   "proj.nicemeet.desc": "App geosocial para Android que permite conocer a otras personas según sus gustos y aficiones.",
   "proj.gloom.meta": "Proyecto fin de máster · 2020 – 2021",
@@ -205,6 +209,9 @@ document.addEventListener('click', e => {
   else if (href.includes('github.com')) name = 'github';
   else if (href.includes('play.google.com')) name = 'google-play-' + (href.includes('.partners') ? 'my-trip' : (href.includes('com.minimo.remind') ? 'remind' : 'travelers'));
   else if (href.includes('apps.apple.com')) name = 'app-store-' + (href.includes('id6795553466') ? 'my-trip' : 'travelers');
+  else if (href.startsWith('tabata')) name = 'web-app-tabata';
+  else if (href.startsWith('remind')) name = 'page-remind';
+  else if (href.startsWith('minimo')) name = 'page-minimo';
   if (!name) return;
   const section = a.closest('section');
   window.goatcounter.count({ path: 'click-' + name + (section && !name.startsWith('nav-') ? '-' + section.id : ''), title: name, event: true });

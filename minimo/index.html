@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14161A">
+  <title>MINIMO — Small, focused apps</title>
+  <meta name="description" content="MINIMO builds small, focused apps that respect your attention. Built with Android and Kotlin Multiplatform.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .minimo-hero { padding: 4rem 0 2rem; }
+    .minimo-mark { letter-spacing: .28em; font-weight: 700; font-size: .85rem; color: var(--accent); text-transform: uppercase; margin: 0 0 .5rem; }
+    .minimo-title { font-size: clamp(2.2rem, 6vw, 3.4rem); letter-spacing: .12em; margin: 0 0 .75rem; }
+    .app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .app-card { display: flex; flex-direction: column; justify-content: space-between; }
+    .app-card .links { margin-top: 1rem; padding-top: .75rem; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../index.html">← Juan Francisco Benítez</a>
+    <nav>
+      <a href="#apps" data-i18n="nav.apps">Apps</a>
+      <a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a>
+    </nav>
+    <div class="controls">
+      <button id="lang" type="button" aria-label="Switch language">ES</button>
+      <button id="theme" type="button" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="minimo-hero">
+      <p class="minimo-mark" data-i18n="hero.eyebrow">Independent App Studio</p>
+      <h1 class="minimo-title">MINIMO</h1>
+      <p class="lead" data-i18n="hero.lead">Small, focused apps that respect your attention. Simple tools that do one thing well, built with modern Android and Kotlin Multiplatform technologies.</p>
+    </section>
+
+    <section id="apps">
+      <h3 class="section-title" data-i18n="nav.apps">Apps</h3>
+      <div class="app-grid">
+        <article class="card app-card">
+          <div>
+            <h4>Remind <span class="badge done">v1.1</span></h4>
+            <span class="meta" data-i18n="remind.meta">Android · Published on Google Play</span>
+            <p data-i18n="remind.desc">Event reminders app with a home screen widget showing your next upcoming event, custom notification lead times, color-coded tags, calendar view and offline local backup.</p>
+            <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Glance Widget</span></div>
+          </div>
+          <div class="links">
+            <a href="../remind/index.html" data-i18n="link.about">About Remind →</a>
+            <a href="https://play.google.com/store/apps/details?id=com.minimo.remind" target="_blank" rel="noopener">Google Play ↗</a>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div>
+            <h4>Tabata <span class="badge done" data-i18n="badge.webLive">Web · Published</span><span class="badge pending" data-i18n="badge.androidTesting">Android · Pending</span></h4>
+            <span class="meta" data-i18n="tabata.meta">Kotlin Multiplatform (KMP) · Android &amp; Web</span>
+            <p data-i18n="tabata.desc">Minimalist interval workout timer with configurable work, rest and cycle phases, synthesized audio cues, voice countdowns, vibration feedback and keyboard shortcuts.</p>
+            <div class="tags"><span>Kotlin</span><span>KMP</span><span>Compose Multiplatform</span><span>WebAssembly</span><span>Android</span></div>
+          </div>
+          <div class="links">
+            <a href="../tabata/index.html" data-i18n="link.openApp">Open Web App →</a>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div>
+            <h4>Schedule <span class="badge wip" data-i18n="badge.wip">Work in progress</span></h4>
+            <span class="meta" data-i18n="schedule.meta">Android · In development</span>
+            <p data-i18n="schedule.desc">Weekly planner to organize your week with a clean, straightforward timetable system.</p>
+            <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span></div>
+          </div>
+        </article>
+
+        <article class="card app-card">
+          <div>
+            <h4>Vault <span class="badge early" data-i18n="badge.early">Early stage</span></h4>
+            <span class="meta" data-i18n="vault.meta">Android · In development</span>
+            <p data-i18n="vault.desc">Personal finance app to track and manage your money in a simple, distraction-free way.</p>
+            <div class="tags"><span>Kotlin</span><span>Jetpack Compose</span><span>Android</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="philosophy">
+      <h3 class="section-title" data-i18n="nav.philosophy">Philosophy</h3>
+      <div class="grid">
+        <article class="card">
+          <h4 data-i18n="phil.focus.title">One thing well</h4>
+          <p data-i18n="phil.focus.desc">No bloated menus, no dark patterns, no unnecessary permissions. Each app solves a single everyday problem cleanly and stays out of your way.</p>
+        </article>
+        <article class="card">
+          <h4 data-i18n="phil.craft.title">Modern engineering &amp; AI</h4>
+          <p data-i18n="phil.craft.desc">Started in July 2026 as an ongoing lab for Clean Architecture, Kotlin Multiplatform (KMP), Compose Multiplatform and AI-assisted product development from idea to release.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> MINIMO · <a href="../index.html">Juan Francisco Benítez López</a> · <a href="https://www.goatcounter.com/" target="_blank" rel="noopener" data-i18n="footer.analytics">Cookie-free analytics by GoatCounter</a></footer>
+
+  <script>
+    const es = {
+      "nav.apps": "Aplicaciones",
+      "nav.philosophy": "Filosofía",
+      "hero.eyebrow": "Estudio independiente de apps",
+      "hero.lead": "Apps pequeñas y centradas en lo esencial que respetan tu atención. Herramientas sencillas que hacen una sola cosa bien, creadas con tecnologías modernas de Android y Kotlin Multiplatform.",
+      "remind.meta": "Android · Publicada en Google Play",
+      "remind.desc": "App de recordatorios de eventos con widget en la pantalla de inicio que muestra tu próximo evento, avisos configurables, etiquetas por colores, vista de calendario y copia de seguridad local offline.",
+      "link.about": "Sobre Remind →",
+      "badge.webLive": "Web · Publicada",
+      "badge.androidTesting": "Android · Pendiente",
+      "tabata.meta": "Kotlin Multiplatform (KMP) · Android y Web",
+      "tabata.desc": "Temporizador minimalista de intervalos con fases configurables de trabajo, descanso y ciclos, pitidos integrados, cuenta atrás por voz, vibración y atajos de teclado.",
+      "link.openApp": "Abrir app web →",
+      "badge.wip": "En desarrollo",
+      "badge.early": "Fase inicial",
+      "vault.meta": "Android · En desarrollo",
+      "vault.desc": "App de finanzas personales para controlar tu dinero de forma sencilla y sin distracciones.",
+      "schedule.meta": "Android · En desarrollo",
+      "schedule.desc": "Planificador semanal para organizar tu semana con un sistema de horarios limpio y directo.",
+      "phil.focus.title": "Una sola cosa bien",
+      "phil.focus.desc": "Sin menús recargados, sin patrones oscuros ni permisos innecesarios. Cada app resuelve un problema cotidiano de forma limpia y directa.",
+      "phil.craft.title": "Ingeniería moderna e IA",
+      "phil.craft.desc": "Iniciado en julio de 2026 como laboratorio continuo de Clean Architecture, Kotlin Multiplatform (KMP), Compose Multiplatform y desarrollo de producto apoyado en IA desde la idea hasta la publicación.",
+      "footer.analytics": "Analítica sin cookies con GoatCounter"
+    };
+    const nodes = document.querySelectorAll("[data-i18n]");
+    const en = {};
+    nodes.forEach(n => { en[n.dataset.i18n] = n.innerHTML; });
+    const root = document.documentElement;
+    const langBtn = document.getElementById("lang");
+    let lang = localStorage.getItem("lang") || (navigator.language.startsWith("es") ? "es" : "en");
+    function apply() {
+      root.lang = lang;
+      nodes.forEach(n => { n.innerHTML = lang === "es" ? (es[n.dataset.i18n] ?? en[n.dataset.i18n]) : en[n.dataset.i18n]; });
+      langBtn.textContent = lang === "es" ? "EN" : "ES";
+    }
+    langBtn.addEventListener("click", () => {
+      lang = lang === "es" ? "en" : "es";
+      localStorage.setItem("lang", lang);
+      apply();
+    });
+    const theme = localStorage.getItem("theme") || "dark";
+    root.dataset.theme = theme;
+    document.getElementById("theme").addEventListener("click", () => {
+      const next = root.dataset.theme === "light" ? "dark" : "light";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+    apply();
+  </script>
+  <script data-goatcounter="https://juanfcrater.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0E1A2B">
+  <title>Remind — MINIMO</title>
+  <meta name="description" content="Event reminders app for Android with a home screen widget showing your next upcoming event, custom notifications, tags and calendar view.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .remind-hero { padding: 4rem 0 2rem; }
+    .eyebrow-link { color: var(--accent); font-weight: 600; font-size: .85rem; letter-spacing: .18em; text-transform: uppercase; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1.25rem; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="../minimo/index.html">← MINIMO</a>
+    <nav>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#tech" data-i18n="nav.tech">Architecture</a>
+      <a href="../index.html" data-i18n="nav.portfolio">Portfolio</a>
+    </nav>
+    <div class="controls">
+      <button id="lang" type="button" aria-label="Switch language">ES</button>
+      <button id="theme" type="button" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="remind-hero">
+      <p class="eyebrow"><a class="eyebrow-link" href="../minimo/index.html">MINIMO</a> · Android</p>
+      <h1>Remind <span class="badge done">v1.1</span></h1>
+      <p class="lead" data-i18n="hero.lead">A clean, distraction-free event reminders app for Android with a home screen widget that keeps your next important date in sight without cluttering your day.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.minimo.remind" target="_blank" rel="noopener">Google Play ↗</a>
+        <a class="btn" href="../minimo/index.html" data-i18n="btn.allApps">All MINIMO apps</a>
+      </div>
+    </section>
+
+    <section id="features">
+      <h3 class="section-title" data-i18n="nav.features">Features</h3>
+      <div class="feature-grid">
+        <article class="card">
+          <h4 data-i18n="feat.widget.title">Home Screen Widget</h4>
+          <p data-i18n="feat.widget.desc">See your next upcoming event and countdown directly on your home screen, with one-tap shortcuts to view the full list or create a new reminder.</p>
+        </article>
+        <article class="card">
+          <h4 data-i18n="feat.notif.title">Flexible Reminders</h4>
+          <p data-i18n="feat.notif.desc">Configure multiple custom notifications per event — minutes, hours, days or weeks in advance — scheduled reliably across device reboots.</p>
+        </article>
+        <article class="card">
+          <h4 data-i18n="feat.tags.title">Tags &amp; Calendar View</h4>
+          <p data-i18n="feat.tags.desc">Organize events with color-coded tags, instant search, date and tag filters, a monthly calendar view and an archive for past events.</p>
+        </article>
+        <article class="card">
+          <h4 data-i18n="feat.backup.title">Offline-First &amp; Local Backup</h4>
+          <p data-i18n="feat.backup.desc">Your data stays on your device in a local Room database, with full JSON backup export and restore whenever you switch phones.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="tech">
+      <h3 class="section-title" data-i18n="nav.tech">Architecture &amp; Stack</h3>
+      <article class="card">
+        <p data-i18n="tech.desc">Built natively in Kotlin with Jetpack Compose, Room for offline persistence, Android AlarmManager and BootReceiver for exact reminder scheduling, and Firebase Crashlytics/Analytics for reliability.</p>
+        <div class="tags">
+          <span>Kotlin</span><span>Jetpack Compose</span><span>Room</span><span>Home Screen Widget</span><span>Clean Architecture</span><span>Firebase</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> MINIMO · <a href="../index.html">Juan Francisco Benítez López</a> · <a href="https://www.goatcounter.com/" target="_blank" rel="noopener" data-i18n="footer.analytics">Cookie-free analytics by GoatCounter</a></footer>
+
+  <script>
+    const es = {
+      "nav.features": "Funcionalidades",
+      "nav.tech": "Arquitectura",
+      "nav.portfolio": "Portfolio",
+      "hero.lead": "Una app de recordatorios de eventos para Android limpia y sin distracciones, con un widget en la pantalla de inicio que mantiene tu próxima fecha importante siempre a la vista.",
+      "btn.allApps": "Todas las apps de MINIMO",
+      "feat.widget.title": "Widget de pantalla de inicio",
+      "feat.widget.desc": "Consulta tu próximo evento y la cuenta atrás directamente en la pantalla de inicio, con accesos directos a la lista completa o a crear un nuevo recordatorio.",
+      "feat.notif.title": "Avisos flexibles",
+      "feat.notif.desc": "Configura varios recordatorios personalizados por evento — minutos, horas, días o semanas antes — programados con precisión incluso tras reiniciar el dispositivo.",
+      "feat.tags.title": "Etiquetas y vista de calendario",
+      "feat.tags.desc": "Organiza tus eventos con etiquetas por colores, búsqueda instantánea, filtros por fecha y etiqueta, vista mensual de calendario y archivo de eventos pasados.",
+      "feat.backup.title": "100 % offline y copia local",
+      "feat.backup.desc": "Tus datos se guardan en tu dispositivo con Room, con exportación e importación completa de copias de seguridad cuando cambies de móvil.",
+      "tech.desc": "Desarrollada en Kotlin nativo con Jetpack Compose, Room para persistencia local, AlarmManager y BootReceiver para notificaciones exactas, y Firebase para monitorización de estabilidad.",
+      "footer.analytics": "Analítica sin cookies con GoatCounter"
+    };
+    const nodes = document.querySelectorAll("[data-i18n]");
+    const en = {};
+    nodes.forEach(n => { en[n.dataset.i18n] = n.innerHTML; });
+    const root = document.documentElement;
+    const langBtn = document.getElementById("lang");
+    let lang = localStorage.getItem("lang") || (navigator.language.startsWith("es") ? "es" : "en");
+    function apply() {
+      root.lang = lang;
+      nodes.forEach(n => { n.innerHTML = lang === "es" ? (es[n.dataset.i18n] ?? en[n.dataset.i18n]) : en[n.dataset.i18n]; });
+      langBtn.textContent = lang === "es" ? "EN" : "ES";
+    }
+    langBtn.addEventListener("click", () => {
+      lang = lang === "es" ? "en" : "es";
+      localStorage.setItem("lang", lang);
+      apply();
+    });
+    const theme = localStorage.getItem("theme") || "dark";
+    root.dataset.theme = theme;
+    document.getElementById("theme").addEventListener("click", () => {
+      const next = root.dataset.theme === "light" ? "dark" : "light";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+    apply();
+  </script>
+  <script data-goatcounter="https://juanfcrater.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

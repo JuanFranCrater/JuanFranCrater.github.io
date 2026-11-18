@@ -1,0 +1,17 @@
+{
+  "name": "Tabata Interval Timer",
+  "short_name": "Tabata",
+  "description": "Minimalist Tabata interval workout timer",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#14161A",
+  "theme_color": "#14161A",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
