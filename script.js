@@ -38,7 +38,7 @@ const es = {
   "eng.int.label": "Integraciones",
   "eng.int.text": "SDKs de soporte al cliente y comunicación como Sprinklr Live Chat y Salesforce Marketing Cloud (notificaciones push y mensajes in-app) en Android e iOS, librerías de pago (Redsys), gráficas (MPAndroidChart) y dispositivos Android con hardware como impresoras Sunmi.",
   "eng.arch.label": "Arquitectura",
-  "eng.arch.text": "Android nativo con Kotlin Coroutines y Flow, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. Aplico Clean Architecture con MVVM o MVI (también MVC y MVP) y he tomado la mayoría de las decisiones de arquitectura en mis proyectos. En Exoticca, la app Android pasó de MVVM a MVI al migrar de XML a Compose, e introduje la modularización como prueba para Kotlin Multiplatform (KMP). Mis apps de MINIMO sirven de banco de pruebas: algunas son modulares y una funciona en Android y en la web con KMP. En iOS mantuve y evolucioné una app en producción con arquitectura VIPER, combinando SwiftUI y UIKit y dependencias con SPM y CocoaPods.",
+  "eng.arch.text": "Android nativo con Kotlin Coroutines y Flow, Hilt, Room para caché offline, Jetpack Compose y Retrofit/OkHttp. Aplico Clean Architecture con MVVM o MVI (también MVC y MVP) y tomé la mayoría de las decisiones de arquitectura en mis proyectos. En Exoticca, la app Android pasó de MVVM a MVI al migrar de XML a Compose, e introduje la modularización como prueba para Kotlin Multiplatform (KMP). Mis apps de MINIMO sirven de banco de pruebas: algunas son modulares, una usa KMP (Android y web) y otra React Native. En iOS mantuve y evolucioné una app en producción con arquitectura VIPER, combinando SwiftUI y UIKit con SPM y CocoaPods.",
   "eng.quality.label": "Calidad y fiabilidad",
   "eng.quality.text": "Tests unitarios y de UI con Compose, mantenimiento del pipeline de CI/CD, monitorización de crashes y análisis de rendimiento con Firebase Performance, tanto en Android como en iOS. Resolví crashes e incidencias en producción, manteniendo la tasa de usuarios sin crashes por encima del 99,8 %.",
   "eng.team.label": "Colaboración y liderazgo",
@@ -51,7 +51,7 @@ const es = {
   "exp.padel.desc": "Mantuve la app y desarrollé nuevas funcionalidades.",
   "exp.viewnext.date": "Sep 2018 – Oct 2019 · 1 año 2 meses", "exp.viewnext.role": "Desarrollador Android",
   "exp.viewnext.desc": "Mantuve y amplié tres aplicaciones Android para distintos clientes, incluyendo gráficas con MPAndroidChart. Comencé como estudiante en prácticas.",
-  "minimo.desc": "MINIMO crea apps pequeñas y centradas en lo esencial que respetan tu atención. Herramientas sencillas que hacen una sola cosa bien, con tecnologías modernas de Android y Kotlin Multiplatform. Es mi laboratorio continuo de prototipado rápido con flujos de trabajo de IA, iniciado en julio de 2026. La IA acompaña cada fase, desde la idea y el diseño hasta el desarrollo, las pruebas y la publicación.",
+  "minimo.desc": "MINIMO crea apps pequeñas y centradas en lo esencial que respetan tu atención. Herramientas sencillas que hacen una sola cosa bien, con tecnologías modernas de Android, Kotlin Multiplatform y React Native. Es mi laboratorio continuo de prototipado rápido con flujos de trabajo de IA, iniciado en julio de 2026. La IA acompaña cada fase, desde la idea y el diseño hasta el desarrollo, las pruebas y la publicación.",
   "footer.analytics": "Analítica sin cookies con GoatCounter",
   "badge.done": "Completado",
   "badge.wip": "En desarrollo",
@@ -59,11 +59,11 @@ const es = {
   "badge.webLive": "Web · Publicada",
   "badge.androidTesting": "Android · Pendiente",
   "proj.tabata.meta": "Android · Web (KMP) · 2026",
-  "proj.tabata.desc": "Temporizador de intervalos para entrenamientos tipo Tabata, con fases de trabajo, descanso y ciclos, avisos sonoros y seguimiento del progreso. Desarrollada con Kotlin Multiplatform (KMP) para funcionar en Android y en la web.",
+  "proj.tabata.desc": "Temporizador de intervalos para entrenamientos tipo Tabata, con fases de trabajo, descanso y ciclos, avisos sonoros y seguimiento del progreso. Desarrollada con Kotlin Multiplatform (KMP) para funcionar en Android y web.",
   "proj.vault.meta": "Android · 2026",
   "proj.vault.desc": "App de finanzas personales para controlar tu dinero de forma sencilla y sin distracciones.",
-  "proj.schedule.meta": "Android · 2026",
-  "proj.schedule.desc": "Planificador semanal para organizar tu semana con un sistema de horarios sencillo.",
+  "proj.schedule.meta": "Android · React Native · 2026",
+  "proj.schedule.desc": "Planificador semanal para organizar tu semana con un sistema de horarios sencillo, aplicando desarrollo con React Native.",
   "proj.other": "Otros proyectos",
   "other.desc": "Herramientas personales que creo para resolver mis propios problemas.",
   "proj.jobscout.meta": "Python · Herramienta personal · 2026",
@@ -94,7 +94,7 @@ const es = {
   "proj.nicemeet.desc": "App geosocial para Android que permite conocer a otras personas según sus gustos y aficiones.",
   "proj.gloom.meta": "Proyecto fin de máster · 2020 – 2021",
   "proj.gloom.desc": "Hack and slash para un jugador desarrollado con Unity3D.",
-  "edu.learning": "No paro de aprender. Mi foco reciente ha sido iOS, la IA y la gestión ágil de producto: desde construir funcionalidades nativas en iOS hasta trabajar con agentes y asistentes en todo el proceso de desarrollo.",
+  "edu.learning": "No paro de aprender. Mi foco reciente ha sido iOS, el desarrollo multiplataforma (KMP y React Native), la IA y la gestión ágil de producto: desde construir funcionalidades nativas en iOS hasta trabajar con agentes y asistentes en todo el proceso de desarrollo.",
   "edu.master": "Máster en Creación de Videojuegos (diseño, arte y programación)",
   "edu.dam": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma",
   "cert.hilt": "Android Hilt, Inyección de Dependencias con Kotlin y Jetpack",
@@ -126,8 +126,8 @@ function apply() {
   document.querySelectorAll("[data-cv]").forEach(a => { a.href = lang === "es" ? "assets/cv-es.pdf" : "assets/cv-en.pdf"; });
   langBtn.textContent = lang === "es" ? "EN" : "ES";
   const desc = lang === "es"
-    ? "Senior Mobile Engineer (8 años en Android, además de iOS y React Native). Visión de producto y desarrollo con IA, combinando liderazgo técnico y responsabilidad end-to-end."
-    : "Senior Mobile Engineer (8 years of Android, plus iOS & React Native). Product-minded and AI-driven, combining technical leadership and end-to-end mobile ownership.";
+    ? "Senior Mobile Engineer (8 años en Android, además de iOS, KMP y React Native). Visión de producto y desarrollo con IA, combinando liderazgo técnico y responsabilidad end-to-end."
+    : "Senior Mobile Engineer (8 years of Android, plus iOS, KMP & React Native). Product-minded and AI-driven, combining technical leadership and end-to-end mobile ownership.";
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
 }
 
